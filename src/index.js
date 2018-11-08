@@ -1,12 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import {Provider} from 'react-redux';
+import {createStore, applyMiddleware, combineReducers} from 'redux';
+import { createLogger} from 'redux-logger';
+import thunkMiddleware from 'redux-thunk';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {MuiThemeProvider} from '@material-ui/core/styles';
+import {theme} from './theme';
+import 'typeface-roboto';
+import {changeRoute} from "./nav/NavReducer";
+import 'tachyons';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const rootReducer = combineReducers({changeRoute});
+const logger = createLogger();
+const store = createStore(rootReducer, applyMiddleware(thunkMiddleware, logger));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(<MuiThemeProvider theme={theme}>
+                    <Provider store={store}>
+                        <BrowserRouter>
+                            <App />
+                        </BrowserRouter>
+                    </Provider>
+                </MuiThemeProvider>
+                , document.getElementById('root'));
+
+serviceWorker.register();

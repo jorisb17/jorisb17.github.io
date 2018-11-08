@@ -1,29 +1,34 @@
 {
-  "name": "website",
+  "name": "dgzreact",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
-    "react-scripts-parcel": "0.0.33"
+    "@material-ui/core": "^3.3.2",
+    "@material-ui/icons": "^3.0.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-loadable": "^5.5.0",
+    "react-redux": "^5.0.7",
+    "react-responsive-carousel": "^3.1.43",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.0.5",
+    "react-slideshow-image": "^1.0.7",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "typeface-roboto": "0.0.54",
+    "tachyons": "^4.9.0"
   },
   "scripts": {
-    "start": "react-scripts-parcel start",
-    "build": "react-scripts-parcel build",
-    "test": "react-scripts-parcel test --env=jsdom",
-    "eject": "react-scripts-parcel eject"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
-  "browserslist": {
-    "development": [
-      "last 2 chrome versions",
-      "last 2 firefox versions",
-      "last 2 edge versions"
-    ],
-    "production": [
-      ">1%",
-      "last 4 versions",
-      "Firefox ESR",
-      "not ie < 11"
-    ]
-  }
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
