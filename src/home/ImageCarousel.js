@@ -20,7 +20,7 @@ class ImageCarousel extends Component {
                     <img alt="" height="auto" width={"600"} src="assets/2.jpg" />
                 </div>
                 <div>
-                    <img alt={""} height="auto" width={"600"}  src="assets/3.jpg" />
+                    <img alt={""} height="auto" width={"600"} src="assets/3.jpg" />
                 </div>
             </Carousel>
         );

@@ -7,7 +7,9 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Divider from "@material-ui/core/Divider";
 import {setRoute} from "../nav/NavActions";
-import Card1 from './Card/Card'
+import NieuwsList from "./Nieuws/NieuwsList";
+import {requestNieuws} from '../nieuws/NieuwsActions';
+import LoadingComponent from "../Loading/LoadingComponent";
 
 const styles = theme => ({
     root: {
@@ -15,13 +17,19 @@ const styles = theme => ({
         paddingTop: theme.spacing.unit * 2,
         paddingBottom: theme.spacing.unit * 2,
     },
+    image: {
+        objectFit: 'cover'
+    }
 });
 
 const mapState = state => ({
-    route: state.changeRoute.route
+    route: state.changeRoute.route,
+    nieuws: state.requestNieuws.nieuws,
+    isPending: state.requestNieuws.isPending
 });
 const actions = (dispatch) => ({
-    onRouteChange: (route) => dispatch(setRoute(route))
+    onRouteChange: (route) => dispatch(setRoute(route)),
+    requestArticles:  () => dispatch(requestNieuws())
 });
 
 class HomePage extends Component{
@@ -44,42 +52,56 @@ class HomePage extends Component{
 
     componentDidMount(){
         this.props.onRouteChange("Home");
+        this.props.requestArticles();
     }
 
     render(){
         const {classes} = this.props;
         return(
-            <Grid container spacing={8}>
-                <Grid item xm={12} sm={12} md={12} lg={9}>
-                    <ImageCarousel/>
-                </Grid>
-                <Grid item xm={12} sm={12} md={12} lg={3}>
-                    <Paper className={classes.root} elevation={1} style={{"height": "100%"}}>
-                        <Typography variant="h3" component="h3">
-                            Welkom!
-                        </Typography>
-                        <br/>
-                        <Divider/>
-                        <br/>
-                        <Typography component="p">
-                            We willen een levende christelijke geloofsgemeenschap zijn. Iedereen is welkom en mag zich bij ons thuisvoelen.
-                            Op deze site is informatie te vinden over onze gemeente, over onze diensten en andere activiteiten en over de doopsgezinden in het algemeen.
-                            Kijk gerust eens rond. En wil je eens komen kijken?
-                            Ons gebouw staat op de Wladimirlaan 10 in Bussum,
-                            vlak bij station Naarden-Bussum!
-                        </Typography>
-                    </Paper>
-                </Grid>
-                <Grid item xm={12} sm={12} md={4} lg={4}>
-                    <Card1 img={this.state.img1} title={this.state.title1} text={this.state.text1}/>
-                </Grid>
-                <Grid item xm={12} sm={12} md={4} lg={4}>
-                    <Card1 img={this.state.img2} title={this.state.title2} text={this.state.text2}/>
-                </Grid>
-                <Grid item xm={12} sm={12} md={4} lg={4}>
-                    <Card1 img={this.state.img3} title={this.state.title3} text={this.state.text3}/>
-                </Grid>
-            </Grid>
+            <div>
+                {!this.props.isPending ?
+                        <Grid container spacing={8}>
+                            <Grid item xm={12} sm={12} md={12} lg={9}>
+                                <Paper className={classes.image} elevation={1}>
+                                    <ImageCarousel/>
+                                </Paper>
+                            </Grid>
+                            <Grid item xm={12} sm={12} md={12} lg={3}>
+                                <Paper className={classes.root} elevation={1} style={{"height": "100%"}}>
+                                    <Typography variant="h3" component="h3">
+                                        Welkom!
+                                    </Typography>
+                                    <br/>
+                                    <Divider/>
+                                    <br/>
+                                    <Typography component="p">
+                                        We willen een levende christelijke geloofsgemeenschap zijn. Iedereen is welkom en
+                                        mag zich bij ons thuisvoelen.
+                                        Op deze site is informatie te vinden over onze gemeente, over onze diensten en
+                                        andere activiteiten en over de doopsgezinden in het algemeen.
+                                        Kijk gerust eens rond. En wil je eens komen kijken?
+                                        Ons gebouw staat op de Wladimirlaan 10 in Bussum,
+                                        vlak bij station Naarden-Bussum!
+                                    </Typography>
+                                </Paper>
+                            </Grid>
+                            <Grid item lg={12}>
+                                <Paper className = {classes.root} elevation={1} style={{'height':'100%'}}>
+                                    <Typography variant={'h3'} component={'h3'}>
+                                        Nieuws
+                                    </Typography>
+                                    <br/>
+                                    <Divider/>
+                                    <br/>
+                                    <Grid container spacing={16}>
+                                        <NieuwsList nieuws={this.props.nieuws}/>
+                                    </Grid>
+                                </Paper>
+                            </Grid>
+                        </Grid>
+                    :<LoadingComponent/>
+                }
+            </div>
         )
     }
 }

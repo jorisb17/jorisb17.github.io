@@ -18,6 +18,21 @@ const AsyncNieuwsPage = Loadable({
     loading: LoadingComponent
 });
 
+const AsyncNieuwsDetailedPage = Loadable({
+    loader: () => import('./nieuws/NieuwsDetailed/NieuwsDetailedPage'),
+    loading: LoadingComponent
+});
+
+const AsyncNieuwsForm = Loadable({
+    loader: () => import('./nieuws/NieuwsForm/NieuwsForm'),
+    loading: LoadingComponent
+})
+
+const AsyncAgendaPage = Loadable({
+    loader: () => import('./agenda/AgendaPage'),
+    loading: LoadingComponent
+});
+
 class App extends Component {
     render() {
         return (
@@ -30,6 +45,9 @@ class App extends Component {
                                 <Switch>
                                     <Route exact path="/" component={AsyncHomePage} />
                                     <Route exact path="/nieuws" component={AsyncNieuwsPage}/>
+                                    <Route path="/nieuws/:id" component={AsyncNieuwsDetailedPage}/>
+                                    <Route exact path={"/nieuwsCreate/"} component={AsyncNieuwsForm}/>
+                                    <Route exact path="/agenda" component={AsyncAgendaPage}/>
                                     <Route exact path={"/test"} component={LoadingComponent}/>
                                 </Switch>
                             </div>

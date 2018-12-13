@@ -12,13 +12,10 @@ import PermIdentityIcon from '@material-ui/icons/PermIdentity'
 import FaceIcon from '@material-ui/icons/Face'
 import NavigationIcon from '@material-ui/icons/Navigation'
 import PermContactCalanderIcon from '@material-ui/icons/PermContactCalendar'
-import AccountCircleIcon from '@material-ui/icons/AccountCircle'
-import CopyrightIcon from '@material-ui/icons/Copyright'
-
 
 export const firstList = (
     <div >
-        <Link style={{"text-decoration": 'none'}} to={"/"}>
+        <Link style={{"textDecoration": 'none'}} to={"/"}>
             <ListItem button >
                 <ListItemIcon>
                     <HomeIcon />
@@ -26,7 +23,7 @@ export const firstList = (
                 <ListItemText primary="Home" />
             </ListItem>
         </Link>
-        <Link style={{"text-decoration": 'none'}} to={"/nieuws"}>
+        <Link style={{"textDecoration": 'none'}} to={"/nieuws"}>
             <ListItem button >
                 <ListItemIcon>
                     <LibraryBooksIcon />
@@ -34,12 +31,14 @@ export const firstList = (
                 <ListItemText primary="Nieuws" />
             </ListItem>
         </Link>
-        <ListItem button >
-            <ListItemIcon>
-                <EventIcon />
-            </ListItemIcon>
-            <ListItemText primary="Agenda" />
-        </ListItem>
+        <Link style={{"textDecoration": 'none'}} to={'/agenda'}>
+            <ListItem button >
+                <ListItemIcon>
+                    <EventIcon />
+                </ListItemIcon>
+                <ListItemText primary="Agenda" />
+            </ListItem>
+        </Link>
         <ListItem button>
             <ListItemIcon>
                 <PermIdentityIcon />

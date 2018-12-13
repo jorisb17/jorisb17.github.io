@@ -19,12 +19,12 @@ function HomeCard(props) {
         <Paper className={classes.root} elevation={1}>
             <List>
                 <ListItem>
-                    <Typography variant="display3">
+                    <Typography variant="h2">
                         {props.title}
                     </Typography>
                 </ListItem>
                 <ListItem>
-                    <Typography variant="headline">
+                    <Typography variant="h5">
                         {props.text}
                     </Typography>
                 </ListItem>

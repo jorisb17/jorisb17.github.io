@@ -1,24 +1,35 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {setRoute} from '../nav/NavActions';
+import {requestNieuws} from './NieuwsActions';
+import LoadingComponent from '../Loading/LoadingComponent';
+import NieuwsList from './NieuwsList';
 
 const mapState = state =>({
-    route: state.changeRoute.route
+    nieuws: state.requestNieuws.nieuws,
+    isPending: state.requestNieuws.isPending,
 });
 
 const actions = (dispatch) => ({
-  onRouteChange: (route) => dispatch(setRoute(route))
+  onRouteChange: (route) => dispatch(setRoute(route)),
+  onRequestNieuws: () => dispatch(requestNieuws())
 });
 
 class NieuwsPage extends Component{
 
-    componentDidMount(){
+     componentDidMount(){
         this.props.onRouteChange("Nieuws");
+        this.props.onRequestNieuws();
+        console.log(this.props.nieuws);
     }
 
     render(){
         return(
-            <h1>Nieuws Pagina</h1>
+            <div>
+              {this.props.isPending? <LoadingComponent/>
+            : <NieuwsList nieuws={this.props.nieuws} />
+        }
+            </div>
         );
 
     }

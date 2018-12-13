@@ -13,11 +13,10 @@ body {
     margin-top: 7em;
     margin-right: 1em;
     margin-left: 1em;
+
   }
 @media only screen and (min-width: 768px) {
   .main {
-    margin-top: 7em;
-    margin-right: 7em;
-    margin-left: 7em;
+      margin: 7em 7em 3em;
   }
 }

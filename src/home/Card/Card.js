@@ -27,7 +27,7 @@ const SimpleMediaCard = (props) => {
             title="Image"
           />
           <CardContent>
-            <Typography gutterBottom variant="headline" component="h2">
+            <Typography gutterBottom variant="h5" component="h2">
               {title}
             </Typography>
             <Typography component="p">

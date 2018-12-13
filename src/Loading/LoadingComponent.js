@@ -17,10 +17,6 @@ const actions = dispatch => ({
 
 class LoadingComponent extends Component {
 
-    componentDidMount(){
-        this.props.onRouteChange("Loading");
-    }
-
     render() {
         const {classes} = this.props;
         return (
