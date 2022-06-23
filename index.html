@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="CSS/Normalize.css">
+    <link rel="stylesheet" href="CSS/General.css">
+    <link rel="stylesheet" href="CSS/Navigation.css">
+    <link rel="stylesheet" href="CSS/Intro.css">
+    <link rel="stylesheet" href="CSS/About.css">
+    <link rel="stylesheet" href="CSS/Gallery.css">
+    <link rel="stylesheet" href="CSS/Review.css">
+    <link rel="stylesheet" href="CSS/Team.css">
+    <link rel="stylesheet" href="CSS/Footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300;400&display=swap" rel="stylesheet">
+    <title>Malfunction</title>
+    <link rel="icon" type="image/x-icon" href="/Images/Icon_1.png">
+</head>
+
+<body onload="startTime(); UpdatePrev(0); UpdateNext(0)">
+    <nav class="navigation sticky">
+        <a href=""><img class="logo" src="Images/Logos/CS_Logo_Transparent.png" alt="Logo"></a>
+
+        <ul class="navigation-list">
+            <li class="navigation-item">
+                <a class="navigation-link" href="#intro">Intro</a>
+            </li>
+            <li class="navigation-item">
+                <a class="navigation-link" href="#about">About</a>
+            </li>
+            <li class="navigation-item">
+                <a class="navigation-link" href="#gallery">Gallery</a>
+            </li>
+            <li class="navigation-item">
+                <a class="navigation-link" href="#team">The team</a>
+            </li>
+            <li class="navigation-item">
+                <a class="navigation-link" href="#reviews">Reviews</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="banner"></div>
+    <header id="intro">
+        <div class="header">
+            <div class="profile-photo-frame">
+                <div class="profile-photo">
+                    <div class="avatar"></div>
+                </div>
+            </div>
+            <h1>Malfunction</h1>
+        </div>
+        <hr/>
+        <div class="summary">
+            <div class="stars">
+                <img src="Images/Review/Star.png" alt="Star">
+                <span class="average"></span>
+                <span class="rating-text">Rating</span>
+            </div>
+            <div class="sub-divider"></div>
+            <div id="download-game">- downloads</div>
+            <div class="sub-divider"></div>
+            <div class="pegi">
+                <img src="Images/pegi.png" alt="pegi-12">
+                <span>Pegi 12</span>
+            </div>
+        </div>
+
+        <div class="intro-content">
+            <p class="log-line"><i>
+                “A conscience robot employee Hestia notices suspicious behavior from the facility AI Kronos causing her to decide to sabotage the factory with her access to tools and stop the AI in charge, which turns out to be controlled by the creator of the factory in an attempt to proof his worth to his family.”
+            </i></p>
+            <div class="intro-description">
+                <p>
+                    Malfunction is a puzzle adventure game with a nice flare of mystery.
+                    To write a good story with a good bit of conflict we aim it at 12 years and older.
+                    This way we can make it pretty spooky without being childish.
+                </p>
+                <p>
+                    In order to make the game feel full, polished and complex, we will keep it small and focus on 3 levels to start with.
+                    Filling it we will use only in-house made 3D assets.
+                    These assets together will create awesome and intrinsic puzzles.
+                </p>
+                <p>
+                    During the game we want to make it more spooky and scary as you get closer to the end boss and for that we will create immersive music.
+                    Our character will be controlled from a third-person perspective in order to let the player easily see what items their character is using but still keeping the player close by and in the game.
+                </p>
+            </div>
+
+            <div class="rating-download">
+                <div class="ratings">
+                    <div class="rating">
+                        <label for="stars-5">5</label>
+                        <progress max="100" value="85" class="custom-progress" id="stars-5">
+                            <!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
+                            <div class="progress-bar">
+                                <span style="width: 85%">80%</span>
+                            </div>
+                        </progress>
+                    </div>
+                    <div class="rating">
+                        <label for="stars-4">4</label>
+                        <progress max="100" value="10" class="custom-progress" id="stars-4">
+                            <!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
+                            <div class="progress-bar">
+                                <span style="width: 10%">10%</span>
+                            </div>
+                        </progress>
+                    </div>
+                    <div class="rating">
+                        <label for="stars-3">3</label>
+                        <progress max="100" value="5" class="custom-progress" id="stars-3">
+                            <!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
+                            <div class="progress-bar">
+                                <span style="width: 5%">5%</span>
+                            </div>
+                        </progress>
+                    </div>
+                    <div class="rating">
+                        <label for="stars-2">2</label>
+                        <progress max="100" value="2" class="custom-progress" id="stars-2">
+                            <!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
+                            <div class="progress-bar">
+                                <span style="width: 2%">2%</span>
+                            </div>
+                        </progress>
+                    </div>
+                    <div class="rating">
+                        <label for="stars-1">1</label>
+                        <progress max="100" value="3" class="custom-progress" id="stars-1">
+                            <!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
+                            <div class="progress-bar">
+                                <span style="width: 3%">3%</span>
+                            </div>
+                        </progress>
+                    </div>
+                </div>
+                <span class="average"></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About</h2>
+            <hr>
+            <div class="description-about">
+                <article>
+                    <p>
+                        Welcome to Chrono CORP. The place to find the best household robots on the planet. We are also
+                        the only place that sells them. Our entire civilization has become dependent on our product so you
+                        can imagine the importance of a smooth production process.
+                    </p>
+                    <p> My name is Jeff and I am the creator of
+                        Chrono CORP. To make sure everything runs smoothly we have created a workforce that only
+                        consists out of robots. It is a fact that robots make less mistakes than humans and more importantly
+                        you don’t have to pay them. So more profit for me.
+                    </p>
+                    <p>
+                        Kronos is our Artificial Intelligence specifically
+                        created for this factory. Every robot in this factory is connected to Kronos. Kronos is responsible for
+                        handing out the tasks and to oversee that every task is completed in time. You will be joining our
+                        factory as our newest repair robot Hestia.
+                    </p>
+                    <p>
+                        You will replace you predecessor as that robot made one
+                        mistake to many and got a rapid disassembly. As one of our repair robots it’s your responsibility to
+                        fix the broken machines. To do this you need special tools that you can find everywhere on the work
+                        floor. Sadly we have not made a general storage area for tools. Every machine requires a different
+                        tool. To reach some of the machines you will need to think beyond the box. But with your critical
+                        thinking capabilities I do not think those little puzzles will be a challenge.
+                    </p>
+                    <p>
+                        If your nervous don’t be.
+                        Remember you are a robot and Kronos will be there to guide you through your fist workday. Oh and
+                        if you see any weird behavior, report it immediately to Kronos. This also includes my brother Kevin
+                    </p>
+                </article>
+                <iframe width="350" height="215" src="https://www.youtube-nocookie.com/embed/m3NSPQ4ilQU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="gameplay">
+                <p><strong>Gameplay</strong></p>
+                <ul>
+                    <li>
+                        <p><strong>Switch arms.</strong></p>
+                        <p>
+                            Hestia is a technician. So, she must repair machines. But she cannot do it with her "normal
+                            arms". Therefor she must switch arms to do her job. Find the right arms to improve your
+                            work and find around your tasks to help the factory!
+                        </p>
+                    </li>
+                    <li>
+                        <p><strong>Become an expert in puzzles.</strong></p>
+                        <p>
+                            Join Hestia to repair machines and walk around the factory. But it is not just repairing and
+                            walking through the factory. By repairing machines, you must solve puzzles. But you can also
+                            dissolve puzzles to break things. In addition, the factory is also a puzzle, you must puzzle your
+                            way to your destination. So, puzzle to your own advantage!
+                        </p>
+                    </li>
+                    <li>
+                        <p><strong>Be a good sneaker.</strong></p>
+                        <p>
+                            Because the employees malfunction, it may be wise to leave your colleagues alone before
+                            something bad happens. Scan through the factory to see where it is best to walk. And do not
+                            get spotted. Because if you are spotted by someone, you might get caught. And maybe
+                            terrible things can happen that you do not want.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <hr>
+            <div class="my-slider">
+                <div class="prev-slide">
+                    <img    id="prev-img"
+                            src=""
+                            alt=""
+                    />
+                </div>
+                <!-- slider container -->
+                <div class="slider">
+
+                    <div class="slide">
+                        <img    class="slide-image"
+                                src="Images/Level/level%201.png"
+                                alt=""
+                        />
+                    </div>
+
+                    <!-- slide 1 -->
+                    <div class="slide">
+                        <img    class="slide-image"
+                                src="Images/Level/level%202.png"
+                                alt=""
+                        />
+                    </div>
+
+                    <!-- slide 2 -->
+                    <div class="slide">
+                        <img    class="slide-image"
+                                src="Images/Level/level%203.png"
+                                alt=""
+                        />
+                    </div>
+
+                    <!-- slide 3 -->
+                    <div class="slide">
+                        <img    class="slide-image"
+                                src="Images/Level/level%204.png"
+                                alt=""
+                        />
+                    </div>
+
+                    <!-- slide 4 -->
+                    <div class="slide">
+                        <img    class="slide-image"
+                                src="Images/Level/level%205.png"
+                                alt=""
+                        />
+                    </div>
+
+                    <!-- Control buttons -->
+                    <button class="btn btn-next">></button>
+                    <button class="btn btn-prev"><</button>
+                </div>
+                <div class="next-slide">
+                    <img    id="next-img"
+                            src="https://source.unsplash.com/random?landscape,mountain"
+                            alt=""
+                    />
+                </div>
+            </div>
+        </section>
+
+        <section id="team">
+            <h2>The team</h2>
+            <hr>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="Images/Team/Bart%20van%20den%20Bos.png" alt="Bart van den Bos">
+                    <p><strong>Bart van den Bos</strong></p>
+                    <p>Lead sound designer</p>
+                </div>
+                <div class="team-member">
+                    <img src="Images/Team/Joris%20Bruinsma.png" alt="Joris Bruinsma">
+                    <p><strong>Joris Bruinsma</strong></p>
+                    <p>Lead storyteller</p>
+                </div>
+                <div class="team-member">
+                    <img src="Images/Team/Sander%20Klein%20Breteler.jpg" alt="Sander klein Breteler">
+                    <p><strong>Sander Klein Breteler</strong></p>
+                    <p>Lead 3D modeler & animator</p>
+                </div>
+                <div class="team-member">
+                    <img src="Images/Team/Benjamin%20Eindhoven.jpg" alt="Benjamin Eindhoven">
+                    <p><strong>Benjamin Eindhoven</strong></p>
+                    <p>3D modeler & animator</p>
+                </div>
+                <div class="team-member">
+                    <img src="Images/Team/Tim%20de%20Haas.jpg" alt="Tim de Haas">
+                    <p><strong>Tim de Haas</strong></p>
+                    <p>Lead programmer</p>
+                </div>
+                <div class="team-member">
+                    <img src="Images/Team/Nena%20Leeuwenburg.jpg" alt="Nena Leeuwenburg">
+                    <p><strong>Nena Leeuwenburg</strong></p>
+                    <p>Concept artist & programmer</p>
+                </div>
+                <div class="team-member">
+                    <img src="Images/Team/Sjoerd%20Rietveld.jpg" alt="Sjoerd Rietveld">
+                    <p><strong>Sjoerd Rietveld</strong></p>
+                    <p>Lead level designer</p>
+                </div>
+                <div class="team-member">
+                    <img src="Images/Team/Bjorn%20Steenbeek.jpg" alt="Björn Steenbeek">
+                    <p><strong>Björn Steenbeek</strong></p>
+                    <p>Programmer</p>
+                </div>
+                <div class="team-member">
+                    <img src="Images/Team/Tim%20Vermaat.jpg" alt="Tim vermaat">
+                    <p><strong>Tim Vermaat</strong></p>
+                    <p>Lead Concept artist</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews">
+            <h2>Reviews</h2>
+            <hr>
+            <div class="reviews-section">
+                <div class="review">
+                    <img class="review-photo" src="Images/Review/PewDiePie-Gaming-Setup-pc-mus-tastatur-skaerm-headset-osv.jpg" alt="Pewdiepie">
+                    <article class="review-article">
+                        <h3>Good job!</h3>
+                        <div class="stars">
+                            <img src="Images/Review/Star.png" alt="Star">
+                            <img src="Images/Review/Star.png" alt="Star">
+                            <img src="Images/Review/Star.png" alt="Star">
+                            <img src="Images/Review/Star.png" alt="Star">
+                            <img src="Images/Review/Star.png" alt="Star">
+                        </div>
+                        <p>
+                            The game has an original story, it looks nice, and it has a great atmosphere.
+                            Malfunction is so good; you do not realize how time passes. I also love that
+                            everything is self-made! My compliments!
+                        </p>
+                    </article>
+                </div>
+                <div class="review">
+                    <img class="review-photo" src="Images/Review/MarkFischbach-640_influencers.jpg" alt="Pewdiepie">
+                    <article class="review-article">
+                        <h3>Surprises, Surprises, Surprises!</h3>
+                        <div class="stars">
+                            <img src="Images/Review/Star.png" alt="Star">
+                            <img src="Images/Review/Star.png" alt="Star">
+                            <img src="Images/Review/Star.png" alt="Star">
+                            <img src="Images/Review/Star.png" alt="Star">
+                            <img src="Images/Review/Star.png" alt="Star">
+                        </div>
+                        <p>
+                            This game is very immersive in story and music. It has surprises that you as a
+                            player would not expect. Malfunction certainly has two of the strongest game
+                            hours you would come across!
+                        </p>
+                    </article>
+                </div>
+                <div class="review">
+                    <img class="review-photo" src="Images/Review/fong2.png" alt="Pewdiepie">
+                    <article class="review-article">
+                        <h3>Awesome story!</h3>
+                        <div class="stars">
+                            <img src="Images/Review/Star.png" alt="Star">
+                            <img src="Images/Review/Star.png" alt="Star">
+                            <img src="Images/Review/Star.png" alt="Star">
+                            <img src="Images/Review/Star.png" alt="Star">
+                            <img src="Images/Review/Star.png" alt="Star">
+                        </div>
+                        <p>
+                            The story is very engaging, and I got to walk around the factory and see what
+                            happened. It is definitely one of those games that you would like to forget so
+                            that you can play blind again.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <img class="logo-cs" src="Images/Logos/CS_Logo_Transparent.png" alt="Logo Chronoline studios">
+        <img class="logo-hhs" src="Images/Logos/hhs_nl_groen_hex.png" alt="Logo HHS">
+    </footer>
+
+    <script src="JavaScript/Main.js"></script>
+    <script src="JavaScript/Carousel.js"></script>
+    </body>
+</html>

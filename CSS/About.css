@@ -1,0 +1,40 @@
+.description-about {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description-about article p {
+    margin: 5px 0;
+}
+
+.description-about img {
+    width: 350px;
+    height: 450px;
+    margin-left: 15px;
+}
+
+/*gameplay*/
+
+.gameplay {
+    margin-top: 15px;
+}
+
+.gameplay p {
+    margin: 0;
+}
+
+.gameplay li {
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 1000px) {
+    .description-about {
+        flex-wrap: wrap;
+    }
+
+    .description-about img {
+        margin-left: 0;
+    }
+}

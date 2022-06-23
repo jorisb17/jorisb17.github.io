@@ -1,0 +1,301 @@
+#intro {
+    padding: 0 75px;
+    margin-top: 15px;
+}
+
+/* Intro */
+.banner {
+    background-image: url("../Images/Poster_Definitef_Expo.jpg");
+    background-position: 20% 60%;
+    background-size: cover;
+    height: 350px;
+    box-shadow: gray 1px 1px 4px;
+    position: relative;
+}
+
+/*intro*/
+.header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#intro h1 {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 0;
+    align-self: center;
+}
+
+.profile-photo-frame {
+    background-color: var(--blue-color);
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    position: relative;
+    margin-left: -100px;
+    margin-right: 10px;
+}
+
+.profile-photo {
+    background-color: var(--blue2-color);
+    width: 85px;
+    height: 85px;
+    top: 8px;
+    position: absolute;
+    left: 8px;
+    border-radius: 15px;
+}
+
+.avatar {
+    width: 75px;
+    height: 75px;
+    background-image: url("../Images/Icon_1.png");
+    background-size: cover;
+    position: absolute;
+    top: 11px;
+    left: 6px;
+}
+
+.avatar:hover {
+    background-image: url("../Images/Icon_2.png");
+}
+
+@media screen and (max-width: 500px) {
+    #intro {
+        padding: 0 5px;
+    }
+
+    .profile-photo-frame {
+        width: 50px;
+        height: 50px;
+        margin-left: -60px;
+    }
+
+    .profile-photo {
+        width: 42px;
+        height: 42px;
+        top: 4px;
+        left: 4px;
+    }
+
+    .avatar {
+        width: 32px;
+        height: 32px;
+        top: 10px;
+        left: 5px;
+    }
+}
+
+/*summary*/
+
+.summary {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.summary img {
+    width: 50px;
+}
+
+.summary .stars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 33%;
+    flex-basis: 33%;
+}
+
+.summary .stars .average {
+    margin-left: 5px;
+}
+
+.summary .stars .rating-text {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.summary #download-game {
+    width: calc(33% - 2px);
+    flex-basis: calc(33% - 2px);
+    text-align: center;
+}
+
+.summary .rating-download {
+    flex-basis: 100%;
+}
+
+.summary .pegi {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    flex-basis: 33%;
+    align-content: center;
+    align-items: center;
+}
+
+.summary .pegi img{
+    margin-bottom: 5px;
+}
+
+.sub-divider {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 50px;
+    background-color: #222222;
+    flex-basis: 1px;
+}
+
+
+
+
+
+.log-line {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.intro-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.intro-content .rating-download {
+    display: flex;
+    justify-content: space-around;
+}
+
+.intro-content .rating-download .ratings {
+    width: calc(100% - 180px);
+    flex-basis: calc(100% - 180px);
+    max-width: 750px;
+}
+
+.intro-content .rating-download .ratings label{
+    margin-right: 5px;
+}
+
+.intro-content .rating-download .average {
+    flex-basis: 150px;
+    width: 100%;
+    display: block;
+    background-image: url("/Images/Review/Star.png");
+    background-position: center;
+    background-size: cover;
+    line-height: 150px;
+    text-align: center;
+    height: 150px;
+    margin: 0 15px;
+}
+
+
+
+.rating-download {
+    flex-basis: 100%;
+}
+
+.rating {
+    display: flex;
+    width: 100%;
+}
+
+.rating progress {
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+/*sliders*/
+/*https://css-tricks.com/html5-progress-element/*/
+progress[value] {
+    /* Get rid of the default appearance */
+    appearance: none;
+
+    /* This unfortunately leaves a trail of border behind in Firefox and Opera. We can remove that by setting the border to none. */
+    border: none;
+
+    /* Add dimensions */
+    width: 100%; height: 20px;
+
+    /* Although firefox doesn't provide any additional pseudo class to style the progress element container, any style applied here works on the container. */
+    background-color: whiteSmoke;
+    border-radius: 10px;
+    box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+
+    /* Of all IE, only IE10 supports progress element that too partially. It only allows to change the background-color of the progress value using the 'color' attribute. */
+    color: royalblue;
+
+    position: relative;
+    margin: 0 0 15px;
+}
+
+/*
+Webkit browsers provide two pseudo classes that can be use to style HTML5 progress element.
+-webkit-progress-bar -> To style the progress element container
+-webkit-progress-value -> To style the progress element value.
+*/
+
+progress[value]::-webkit-progress-bar {
+    background-color: whiteSmoke;
+    border-radius: 10px;
+    box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+}
+
+progress[value]::-webkit-progress-value {
+    position: relative;
+
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+    border-radius: 10px;
+
+    /* Let's animate this */
+    animation: animate-stripes 5s linear infinite;
+}
+
+/* Let's spice up things little bit by using pseudo elements. */
+
+progress[value]::-webkit-progress-value:after {
+    /* Only webkit/blink browsers understand pseudo elements on pseudo classes. A rare phenomenon! */
+    content: '';
+    position: absolute;
+
+    width:5px; height:5px;
+    top:7px; right:7px;
+
+    background-color: white;
+    border-radius: 100%;
+}
+
+/* Firefox provides a single pseudo class to style the progress element value and not for container. -moz-progress-bar */
+
+progress[value]::-moz-progress-bar {
+    background-color: royalblue;
+}
+
+/* Fallback technique styles */
+.progress-bar {
+    background-color: whiteSmoke;
+    border-radius: 10px;
+    box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+
+    /* Dimensions should be similar to the parent progress element. */
+    width: 100%; height:20px;
+}
+
+.progress-bar span {
+    background-color: royalblue;
+    border-radius: 10px;
+
+    display: block;
+    text-indent: -9999px;
+}
+
+.custom-progress::-webkit-progress-value {
+    /* Gradient background with Stripes */
+    background-color: royalblue;
+}

@@ -1,0 +1,52 @@
+:root {
+    --blue-color: #325590;
+    --blue2-color: #7298B9;
+    --red-color: #8C6767;
+    --blue4-color: #43526A;
+    --blue5-color: #85B4DD;
+    --yellow-color: #E5A139;
+    --blue7-color: #4E80F5;
+    --grey-color: #A6A6A6;
+    --blue8-color: #A8B3C3;
+    --blue9-color: #B9B9B9;
+}
+
+* {
+    font-family: 'Akshar', sans-serif;
+    font-size: 20px;
+}
+
+body {
+    margin: -20px 0 0;
+}
+
+hr {
+    width: 180px;
+    margin: auto;
+    border: 0;
+    height: 1px;
+    background: var(--blue4-color) linear-gradient(to right, var(--blue5-color), var(--blue4-color), var(--blue5-color));
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+section {
+    padding: 15px 75px;
+}
+
+section:nth-child(odd) {
+    background-color: #e6e6e6;
+}
+
+@media screen and (max-width: 500px) {
+    section {
+        padding: 15px 5px;
+    }
+}

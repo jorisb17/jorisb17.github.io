@@ -1,0 +1,28 @@
+/*footer*/
+
+.footer {
+    background-color: #222222;
+    color: var(--blue8-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px 5px;
+}
+
+.logo-cs {
+    width: 130px;
+    height: 150px;
+}
+
+.logo-hhs {
+    width: 450px;
+    height: 150px;
+}
+
+@media screen and (max-width: 500px) {
+    .logo-hhs {
+        width: 350px;
+        height: 120px;
+    }
+}
+

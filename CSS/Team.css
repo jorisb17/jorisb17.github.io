@@ -1,0 +1,21 @@
+/*team*/
+.team-members {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    padding: 15px;
+    width: 200px;
+}
+
+.team-member img {
+    border-radius: 100%;
+    width: 100%;
+}
+
+.team-member p {
+    text-align: center;
+    margin: 5px;
+}
